@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html lang="pt">
+
+    <head>
+      <title>Aula 1</title>
+      <meta charset="utf-8"/>
+      <meta name="keybords" content="Fabio,Gonçalves,>Desenvolvedor,Html,CSS,JS,javascrpt,pós graduação"/>
+      <meta name="description" content="site teste da aula 1 do tecdam"/>
+	  <!-- Módularização: Importação dos modulos CSS. Para melhor origanização os módulos foram centralizados. -->
+	  <link href="app.css" rel="stylesheet"/>
+	  
+	  <!-- Semântica: Visto que o IE 8 não suporta a nova semântica do HTML5 uma saída de contorno é usar um comentários condicionais suportado pelo IE para acessar a correção promovida pelo projeto html5shiv -->
+      <!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	  <![endif]-->	  
+    </head>		
+
+    <body>	    
+	
+	    <!-- Modularização: Todo conteúdo do body é colocado no Div para torna-lo independente e facilitar a manipulação como centralização. -->
+        <div class="container" role="application">
+		
+            <!-- Semântica: Uso do header no lugar do div para identificação do topo ou cabeçalho da página -->
+			<header class="hdr">
+                <h1 class="hdr__h1">Cabeçalho da Página</h1>
+				
+				<!-- Semântica: Uso do nav no lugar do div para identificação de lista de links da página seja menu, links locais ou globais. -->
+                <nav>
+                    <ul class="hdr__ul">
+                        <li class="hdr__li"><a class="hdr__a" href="#">Home</a></li>            
+                        <li class="hdr__li"><a class="hdr__a" href="#">Contato</a></li>
+                        <li class="hdr__li"><a class="hdr__a" href="#">Login</a></li>
+                    </ul>
+                </nav>
+            </header>
+			
+            <main>
+                <!-- Semântica: Uso do aside no lugar do div para identificação de conteúdos que fazem referências ao conteúdo principal da página. 
+  				             Ex: Barra Lateral direita usado normalmente para publicidade ou links relacionados. -->
+				<!-- Acessibilidade: Aplicação do WAI-ARIA usando role Landmark -->			
+				<aside role="complementary">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Item 1</a></li>            
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
+                    </nav>
+                </aside>    
+            </main>
+			
+            <!-- Semântica: Uso do section no lugar do div para identificação da área em que o conteúdo será dividido em sessões na página  -->
+			<!-- Acessibilidade: Aplicação do WAI-ARIA usando role Landmark -->			
+			<section role="main">
+			
+                <!-- Semântica: Uso do article no lugar do div para identificação o conteúdo de maior relevância da pagina -->
+				<!-- Acessibilidade: Aplicação do WAI-ARIA usando role Document Structure -->			
+				<article role="document">
+				
+					<!-- Acessibilidade: Uso link invisiveis para acesso dos leitores de telas e descrição da propriedade alt em caso de navegador com imagem desabilitada. -->			
+					<div>
+						<img class="main__image--responsiva50p" src="img/HTML5.png" alt="Imagem Ilustrando o HTML5" title="Imagem Logomarca HTML5"/><br>
+						<a class="main__link--descritivo--imagem" href="#">Imagem Ilustrando o HTML5</a>
+					</div>
+					<div>
+						<img class="main__image--responsiva50p" src="img/css3.png" alt="Imagem Ilustrando o CSS3" title="Imagem Logomarca CSS3"/><br>
+						<a class="main__link--descritivo--imagem" href="#">Imagem Ilustrando o CSS3</a>
+					</div>
+					<div>
+						<img class="main__image--responsiva" src="img/semantica_HTML5.png" alt="Imagem Ilustrando a semântica do HTML5" title="Semântica do HTML5"/><br>
+						<a class="main__link--descritivo--imagem" href="#">Imagem Ilustrando a semântica do HTML5</a>
+					</div>
+					
+					<div hole="textbox">
+						<h4>Relatório de Estudo</h4><br>
+						<br>
+						<br>
+						<h4>Desenvolvimento de Aplicações WEB/Híbridas Multiplataformas</h4><br>
+						<br>
+						<br>
+						<br>  
+						<p>Realizado  por:<br>
+						Fábio Gonçalves<br>
+						fabiogsantos@gmail.com</p><br>
+						<br>
+						<p>Ministrado  por:<br>
+						Felipe de Albuquerque - fa@cesar.org.br</p><br>
+						<br>
+						<h4>Faculdade dos Guararapes / Cesar.EDU</h4><br>
+						<br>
+						<br>
+						<h4>Resumo</h4><br>
+						<p>Estudo sobre BEM CSS, semântica, responsividade web design, acessibilidade, performance CSS, reuso e modularidade.</p><br>
+						<br>
+						<br>
+						<h4>BEM CSS (Block Element Modifier to Cascading Style Sheets)</h4><br>
+						<p>A sigla BEM significa block, element, modifier e segue essas propriedades para definir uma nova metodologia de criação de nomes para classes de folhas de estilo.<br>
+						A estrutura é simples:<br>
+						.elementopai, .elementopai__filho, .elementopai__filho- -primeiro</p>
+						<br>
+						<br>
+						<p>As marcas registradas da estruturação BEM são o uso do “__” e do “- -“: sendo que o primeiro define um elemento (filho do elemento pai), e o segundo define um modificador.<br>
+						A grande ideia é padronizar para que qualquer front-end, ao se deparar com essa estrutura, separada por “__” ou “- -“, identifique os elementos e os modificadores só de analisar um HTML.</p><br>
+						<br>
+						<p>Exemplo CSS:<br>
+						.formcontent (elemento pai)<br>
+						.formcontent__field (elemento filho)<br>
+						.formcontent__field--first (elemento filho modificado)</p><br>
+						<br>
+						<br>
+						<p>No HTML:<br> 
+						&ltform class="formcontent"><br>
+						  &ltinput type="text" class="formcontent__field--first" /><br>
+						  &ltinput type="text" class="formcontent__field" /><br>
+						  &ltinput type="submit" class="formcontent__field--button" /><br>
+						&lt/form></p><br>
+						<br>
+						<br>
+						
+						<!-- acatando o uso da semantica do HTML5 -->
+						<p>Qual o aproveitamento do conteúdo?</p>
+						<select class="main__selecao--com--semantica">
+						  <option value="selNivelAlto">Nivel Alto</option>                       
+						  <option value="selNivelModerado">Nivel Moderado</option>
+						  <option value="selNivelBaixo">Nível Baixo</option>
+						</select>
+						
+						<!-- ignorando o uso da semantica do HTML5 -->
+						<div class="main__selecao--sem--semantica">
+						  <div class="btn" data-toggle="dropdown">Qual o aproveitamento do conteúdo?</div>
+							  <ul class="dropdown-menu">
+								  <li>Nivel Alto</li>                       
+								  <li>Nivel Moderado</li>
+								  <li>Nível Básico</li>
+							  </ul>						  
+						</div>							
+						
+						<h4>Referências</h4><br>					
+						
+						<!-- Referências BEM CSS -->
+						<p class="main__referencia--primeiro">
+						  Poplade, Thaiana -  https://tableless.com.br/bem-um-novo-metodo-para-seu-css.<br>
+						  Sarti, Erika - http://erikasarti.net/html/acentuacao-caracteres-especiais/<br>
+						</p>
+						
+						<!-- Referências Semântica -->
+						<p class="main__referencia--primeiro">					
+						   Santos, Yoseph - http://maujor.com/tutorial/escrevendo-html-semantico.php<br>
+						   Bruno, William - https://imasters.com.br/front-end/web-standards/semantica-html5-comece-agora-mesmo-use/?trace=1519021197&source=single<br>
+						   (Caelum) - https://www.caelum.com.br/apostila-html-css-javascript/html-semantico-e-posicionamento-no-css/#3-13-para-saber-mais-suporte-html5-no-internet-explorer-antigo<br>
+						   http://www.uxdesign.blog.br/front-end/html5-estrutura-semantica/<br>					   
+						</p>   
+						
+						<!-- Referências Responsividade Web Design -->
+						<p class="main__referencia--primeiro">					
+						   Ferreira, Elcio; Eis, Diego - http://www.w3c.br/pub/Cursos/CursoHTML5/html5-web.pdf<br>
+						   (CURSO W3C ESCRITÓRIO BRASIL) - http://www.w3c.br/pub/Cursos/CursoCSS3/css-web.pdf<br>
+						   Eis, Diego - https://tableless.com.br/introducao-ao-responsive-web-design/<br>					   
+						</p>
+						
+						<!-- Referências Acessibilidade -->
+						<p class="main__referencia--primeiro">		
+						Ferraz, Reinaldo - https://tableless.com.br/css-e-acessibilidade-na-web/<br>
+						Eis, Diego - https://tableless.com.br/wai-aria-estendendo-o-significado-das-interacoes/<br>
+						(W3C) - https://www.w3.org/TR/wai-aria/roles<br>
+						</p>
+						
+						<!-- Referências Performance CSS -->
+						<p class="main__referencia--primeiro">	
+						Eis, Diego - https://tableless.com.br/melhorando-performance-css/		
+						Farias, Guilherme - https://speakerdeck.com/guilhermefarias/performance-css					
+						</p>
+						
+						<!-- Referências Reuso -->
+						<p class="main__referencia--primeiro">					
+						(CSSSustentável) - http://csssustentavel.com.br/capitulos/reuso/
+						</p>
+						
+						<!-- Referências Modularidade -->
+						<p class="main__referencia--primeiro">	
+						Luna, Bernard - https://www.infoq.com/br/presentations/css-modular	
+						(CSSSustentável) - http://csssustentavel.com.br/capitulos/modulos/		
+						Eis, Diego - https://tableless.com.br/css-modular-breve-explicacao/										
+						</p>
+				  </div>
+				  
+                </article>  
+				
+            </section>  
+			
+            <!-- Semântica: Uso do footer no lugar do div para identificação do rodapé da pagina. -->			
+            <footer>
+                <adress>Pós-Graduação FG/Cesar 2017</adress>
+            </footer>
+			
+        </div>
+    </body>
+</html>

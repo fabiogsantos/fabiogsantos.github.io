@@ -1,0 +1,70 @@
+/* Módularização: módulo menu */
+
+/*
+Peformance: 
+
+- Evitar uso de IDs ou Classes ligados a tags:
+	EVITAR:
+		div.content {…}
+		div#geral {…}
+
+	RECOMENDADO:
+		.content {…}
+		#geral {…}		
+
+	
+- Evitar uso selectores filhos:
+	EVITAR:	
+		nav#menu ul li a {…}
+
+	RECOMENDADO:
+		.menuitem {…}	
+	
+- Não colocar o nome de tag no nome de classes:	
+	EVITAR:
+		li.selected {…}
+		
+	RECOMENDADO:
+		.liselected {…}
+	
+- Evitar seletores descendentes:
+	EVITE:
+		section article h1 {…}
+
+	É bom, mas nem tanto:
+		section > article > h1 {…}
+
+	RECOMENDADO:
+		.tituloh1 {…}
+	
+*/
+
+.aside {
+    float: left;
+    width: 18%;
+    margin-right: 15%;
+    padding: 1%;
+}
+
+aside a {
+    display: block;
+    padding: 1%;
+}
+
+aside a:hover {
+    background: blue;
+    color: white;
+}
+
+aside ul {
+    border-bottom: 1px solid red;
+    border-top: 0;
+}
+
+aside li: {
+    float: left;
+}
+
+aside li:last-child {
+    border-bottom: 0;
+}

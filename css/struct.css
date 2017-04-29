@@ -1,0 +1,144 @@
+/*
+Peformance: 
+
+- Evitar uso de IDs ou Classes ligados a tags:
+	EVITAR:
+		div.content {…}
+		div#geral {…}
+
+	RECOMENDADO:
+		.content {…}
+		#geral {…}		
+
+	
+- Evitar uso selectores filhos:
+	EVITAR:	
+		nav#menu ul li a {…}
+
+	RECOMENDADO:
+		.menuitem {…}	
+	
+- Não colocar o nome de tag no nome de classes:	
+	EVITAR:
+		li.selected {…}
+		
+	RECOMENDADO:
+		.liselected {…}
+	
+- Evitar seletores descendentes:
+	EVITE:
+		section article h1 {…}
+
+	É bom, mas nem tanto:
+		section > article > h1 {…}
+
+	RECOMENDADO:
+		.tituloh1 {…}
+	
+*/
+
+a {
+    transition: all 0.8s ease;
+}
+
+/* Reuso: Usar a virgula para reuso de configuração aumentando a produtividade e facilitando a manutenção */
+.main__link--descritivo--imagem,
+.hdr__ul, 
+.hdr__a,
+.main__referencia--primeiro,
+.main__selecao--com--semantica,
+.main__selecao--sem--semantica
+ {
+    display: block;
+ }
+
+/* Reuso: Usar a virgula para reuso de configuração aumentando a produtividade e facilitando a manutenção */
+.main__image--responsiva,
+.main__image--responsiva50p {
+    max-width: 100%;
+}
+
+.container {
+    background: #eee;
+    width: 90%;
+    margin: 0 auto;    
+}
+
+.main__link--descritivo--imagem {
+    margin-bottom: 30px; 
+    color: transparent;	
+}
+
+/* Módularização: módulo main */
+
+/* Peformance: Uso da classe no lugar de seletor filho */
+.hdr__h1 {
+    padding: 20px 40px;
+}
+
+/* Peformance: Uso da classe no lugar de seletor filho */
+.hdr__ul {
+    border-bottom: 1px solid red;
+    margin-top: 30px; 
+    float: none;
+    overflow: auto;
+    clear: both;
+}
+
+/* Peformance: Uso da classe no lugar de seletor filho */
+.hdr__li {
+    float: left;
+}
+
+/* Peformance: Uso da classe no lugar de seletor filho */
+.hdr__a {
+    transition: all 0.8s ease;
+    padding: 10px 20px;
+}
+
+/* Peformance: Uso da classe no lugar de seletor filho */
+.hdr__a:hover {
+    background: blue;
+    color: white;
+}
+
+/* BEM CSS: Uso de padrão BEM, onde: __ identifica o seletor filho e -- modificador */
+.main__image--responsiva50p {
+    width: 50%;
+}
+
+/* BEM CSS: Uso de padrão BEM, onde: __ identifica o seletor filho e -- modificador */
+.main__referencia--primeiro {
+	font-style: armenian;
+	font-size: 15px;
+	color: gray;
+	margin-bottom: 5px;
+}
+
+/* BEM CSS: Uso de padrão BEM, onde: __ identifica o seletor filho e -- modificador */
+.main__selecao--com--semantica {
+	color: blue;	
+	margin-bottom: 20px;
+}
+
+/* BEM CSS: Uso de padrão BEM, onde: __ identifica o seletor filho e -- modificador */
+.main__selecao--sem--semantica {
+	color: gray;	
+	margin-bottom: 20px;
+}
+
+main {
+    clear: both;
+} 
+
+section {
+	float: right;
+	width: 70%;
+    padding: 10%;
+    background-color: write;
+}
+
+footer {
+    clear: both;
+	padding: 5%;
+}
