@@ -109,15 +109,15 @@ a {
 
 /* BEM CSS: Uso de padrão BEM, onde: __ identifica o seletor filho e -- modificador */
 .main__referencia--primeiro {
-	font-style: armenian;
-	font-size: 15px;
+	/* font-style: armenian;
+	font-size: 15px; */
 	color: gray;
 	margin-bottom: 5px;
 }
 
 /* BEM CSS: Uso de padrão BEM, onde: __ identifica o seletor filho e -- modificador */
 .main__selecao--com--semantica {
-	color: blue;	
+	/*color: blue;	*/
 	margin-bottom: 20px;
 }
 
@@ -125,6 +125,12 @@ a {
 .main__selecao--sem--semantica {
 	color: gray;	
 	margin-bottom: 20px;
+}
+
+.main__header__titulo {
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
 }
 
 main {

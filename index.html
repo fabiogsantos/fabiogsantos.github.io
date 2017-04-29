@@ -6,23 +6,44 @@
       <meta charset="utf-8"/>
       <meta name="keybords" content="Fabio,Gonçalves,>Desenvolvedor,Html,CSS,JS,javascrpt,pós graduação"/>
       <meta name="description" content="site teste da aula 1 do tecdam"/>
+	  <!-- Responsividade: Melhor organização dos artefatos e fontes da tela. -->
+	  <meta name="viewport" content="width=device-width, initial-scala=1">
 	  <!-- Módularização: Importação dos modulos CSS. Para melhor origanização os módulos foram centralizados. -->
-	  <link href="app.css" rel="stylesheet"/>
+	  <link rel="stylesheet" href="app.css"/>
+	  <link rel="stylesheet" data-css="app2" href="app.css"/>
 	  
 	  <!-- Semântica: Visto que o IE 8 não suporta a nova semântica do HTML5 uma saída de contorno é usar um comentários condicionais suportado pelo IE para acessar a correção promovida pelo projeto html5shiv -->
       <!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	  <![endif]-->	  
+	  <![endif]-->	 	  
+
+      <script type="text/javascript">
+		  // Comentario
+		  /*
+			Comentario
+		  */
+		  /*var sNome = window.prompt("Digite o seu nome:");
+		  Document.write(sNome);*/
+      </script>	 
+	  
     </head>		
 
     <body>	    
-	
+		<!-- Semântica: Uso do nav no lugar do div para identificação de lista de links da página seja menu, links locais ou globais. -->
+		<nav>
+			<ul class="a11y">
+				<li class="hdr__li"><a class="hdr__a" href="#conteudo" aria-label="Navegar até o conteúdo da página.">Ir ao Conteúdo</a></li>            
+				<li class="hdr__li"><a class="hdr__a" href="#menu">Ir ao Menu</a></li>
+				<li class="hdr__li"><a class="hdr__a" id="btnContraste" href="#">Contraste</a></li>
+			</ul>
+		</nav>
+	    
 	    <!-- Modularização: Todo conteúdo do body é colocado no Div para torna-lo independente e facilitar a manipulação como centralização. -->
         <div class="container" role="application">
 		
             <!-- Semântica: Uso do header no lugar do div para identificação do topo ou cabeçalho da página -->
 			<header class="hdr">
-                <h1 class="hdr__h1">Cabeçalho da Página</h1>
+                <h1 tabindex=0 class="hdr__h1">Cabeçalho da Página</h1>
 				
 				<!-- Semântica: Uso do nav no lugar do div para identificação de lista de links da página seja menu, links locais ou globais. -->
                 <nav>
@@ -41,7 +62,7 @@
 				<aside role="complementary">
                     <nav>
                         <ul>
-                            <li><a href="#">Item 1</a></li>            
+                            <li><a id="btnTrocarTitulo" class="main__header__titulo" href="#">Troca Titulo</a></li>            
                             <li><a href="#">Item 2</a></li>
                             <li><a href="#">Item 3</a></li>
                         </ul>
@@ -51,31 +72,55 @@
 			
             <!-- Semântica: Uso do section no lugar do div para identificação da área em que o conteúdo será dividido em sessões na página  -->
 			<!-- Acessibilidade: Aplicação do WAI-ARIA usando role Landmark -->			
-			<section role="main">
+			<section id="conteudo" role="main">
 			
                 <!-- Semântica: Uso do article no lugar do div para identificação o conteúdo de maior relevância da pagina -->
 				<!-- Acessibilidade: Aplicação do WAI-ARIA usando role Document Structure -->			
 				<article role="document">
 				
-					<!-- Acessibilidade: Uso link invisiveis para acesso dos leitores de telas e descrição da propriedade alt em caso de navegador com imagem desabilitada. -->			
 					<div>
 						<img class="main__image--responsiva50p" src="img/HTML5.png" alt="Imagem Ilustrando o HTML5" title="Imagem Logomarca HTML5"/><br>
-						<a class="main__link--descritivo--imagem" href="#">Imagem Ilustrando o HTML5</a>
-					</div>
-					<div>
+						  <p>HTML5 é a mais recente evolução do padrão que define o HTML. O termo representa dois conceitos diferentes:
+								É uma nova versão da linguagem HTML, com novos elementos, atributos, e comportamentos						
+						  <span class="readmoreSemJQuery">
+                                e um conjunto maior de tecnologias que permite o desenvolvimento de aplicações e web sites mais diversos e poderosos. Este conjunto é chamado HTML5 & friends e muitas vezes abreviado apenas como HTML5.
+								Criada para ser utilizável por todos os desenvolvedores da Web Aberta, essa página de referências faz ligações a inúmeros recursos do HTML5, classificados em diversos grupos, baseando-se em suas funções;
+
+								Semântica: permite você descrever mais precisamente o seu conteúdo.
+								Conectividade: permite uma comunicação com o servidor de formas modernas e inovadoras.
+								Offline e armazenamento: Permite que páginas web armazenem dados localmente do lado do cliente e opere de forma offline mais eficientemente.
+								Multimídia: Viabiliza a utilização de áudio e vídeo de forma primorosa na Web Aberta.
+								Gráficos e efeitos 2D/3D: viabiliza um leque diversificado de opções de representação gráfica. 
+								Performace e integração: fornece grande otimização de velocidade e melhor utilização do hardware do computador.
+								Acesso ao dispositivo: viabiliza a utilização de diversos métodos e dispositivos de entrada e saída.
+								Estilização: permite aos autores a escrita de temas mais sofistificados.						  						    
+						  </span><a href="#">Leia mais</a>
+						  </p>						  
 						<img class="main__image--responsiva50p" src="img/css3.png" alt="Imagem Ilustrando o CSS3" title="Imagem Logomarca CSS3"/><br>
-						<a class="main__link--descritivo--imagem" href="#">Imagem Ilustrando o CSS3</a>
-					</div>
-					<div>
+						  <p>HTML5 é a mais recente evolução do padrão que define o HTML. O termo representa dois conceitos diferentes:
+								É uma nova versão da linguagem HTML, com novos elementos, atributos, e comportamentos						
+						  <span class="readmoreComJQuery">
+                                e um conjunto maior de tecnologias que permite o desenvolvimento de aplicações e web sites mais diversos e poderosos. Este conjunto é chamado HTML5 & friends e muitas vezes abreviado apenas como HTML5.
+								Criada para ser utilizável por todos os desenvolvedores da Web Aberta, essa página de referências faz ligações a inúmeros recursos do HTML5, classificados em diversos grupos, baseando-se em suas funções;
+
+								Semântica: permite você descrever mais precisamente o seu conteúdo.
+								Conectividade: permite uma comunicação com o servidor de formas modernas e inovadoras.
+								Offline e armazenamento: Permite que páginas web armazenem dados localmente do lado do cliente e opere de forma offline mais eficientemente.
+								Multimídia: Viabiliza a utilização de áudio e vídeo de forma primorosa na Web Aberta.
+								Gráficos e efeitos 2D/3D: viabiliza um leque diversificado de opções de representação gráfica. 
+								Performace e integração: fornece grande otimização de velocidade e melhor utilização do hardware do computador.
+								Acesso ao dispositivo: viabiliza a utilização de diversos métodos e dispositivos de entrada e saída.
+								Estilização: permite aos autores a escrita de temas mais sofistificados.						  						    
+						  </span><a>Leia mais</a>
+						  </p>						  
 						<img class="main__image--responsiva" src="img/semantica_HTML5.png" alt="Imagem Ilustrando a semântica do HTML5" title="Semântica do HTML5"/><br>
-						<a class="main__link--descritivo--imagem" href="#">Imagem Ilustrando a semântica do HTML5</a>
 					</div>
 					
 					<div hole="textbox">
-						<h4>Relatório de Estudo</h4><br>
+						<h4 tabindex=0>Relatório de Estudo</h4><br>
 						<br>
 						<br>
-						<h4>Desenvolvimento de Aplicações WEB/Híbridas Multiplataformas</h4><br>
+						<h4 tabindex=0>Desenvolvimento de Aplicações WEB/Híbridas Multiplataformas</h4><br>
 						<br>
 						<br>
 						<br>  
@@ -139,8 +184,8 @@
 						
 						<!-- Referências BEM CSS -->
 						<p class="main__referencia--primeiro">
-						  Poplade, Thaiana -  https://tableless.com.br/bem-um-novo-metodo-para-seu-css.<br>
-						  Sarti, Erika - http://erikasarti.net/html/acentuacao-caracteres-especiais/<br>
+						  <a href="https://tableless.com.br/bem-um-novo-metodo-para-seu-css.">Poplade, Thaiana - https://tableless.com.br/bem-um-novo-metodo-para-seu-css.</a><br>
+						  <a href="http://erikasarti.net/html/acentuacao-caracteres-especiais">Sarti, Erika - http://erikasarti.net/html/acentuacao-caracteres-especiais<br>
 						</p>
 						
 						<!-- Referências Semântica -->
@@ -155,7 +200,8 @@
 						<p class="main__referencia--primeiro">					
 						   Ferreira, Elcio; Eis, Diego - http://www.w3c.br/pub/Cursos/CursoHTML5/html5-web.pdf<br>
 						   (CURSO W3C ESCRITÓRIO BRASIL) - http://www.w3c.br/pub/Cursos/CursoCSS3/css-web.pdf<br>
-						   Eis, Diego - https://tableless.com.br/introducao-ao-responsive-web-design/<br>					   
+						   Eis, Diego - https://tableless.com.br/introducao-ao-responsive-web-design/<br>	
+                           https://tableless.com.br/design-responsivo-na-pratica-do-rascunho-ao-digita/<br>
 						</p>
 						
 						<!-- Referências Acessibilidade -->
@@ -163,6 +209,7 @@
 						Ferraz, Reinaldo - https://tableless.com.br/css-e-acessibilidade-na-web/<br>
 						Eis, Diego - https://tableless.com.br/wai-aria-estendendo-o-significado-das-interacoes/<br>
 						(W3C) - https://www.w3.org/TR/wai-aria/roles<br>
+						http://a11yproject.com/<br>
 						</p>
 						
 						<!-- Referências Performance CSS -->
@@ -194,5 +241,30 @@
             </footer>
 			
         </div>
+		
+		<script type="text/javascript" scr="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" scr="js/action_jquery.js"></script>		
     </body>
+	
+      <script type="text/javascript">
+		  // Comentario
+		  /*
+			Comentario
+		  */
+          document.getElementById("btnContraste").addEventListener("fnContraste");
+          document.getElementById("btnContraste").addEventListener("fnContraste");
+		  
+		  function fnContraste() {
+		    var html = document.getElementsByTagName("html")[0];
+			html.className = ( (html.classname == "contraste") ? "" : "contraste" );
+		  }
+		  
+		  var objActions = {
+		    trocarTitulo: function fnTrocarTitulo() {
+  		      document.getElementById("btnTrocarTitulo").innerHTML = window.prompt("Favor informe o novo título", "Novo Titulo");
+            }
+          } 			
+		  
+      </script>	 
+	  
 </html>

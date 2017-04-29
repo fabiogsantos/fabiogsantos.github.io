@@ -1,0 +1,14 @@
+
+*:focus {
+  outline: 0.2em dashed #CCC;
+}
+
+.a11y {
+	display: flex;
+	justify-content: space-around;
+}	
+
+.contraste * {
+	background-color: black;
+	color: write;
+}

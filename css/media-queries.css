@@ -1,5 +1,7 @@
 body {
-    background-color:white;
+    /*background-color: white;*/
+    /* Responsividade: Melhor organização dos artefatos e fontes da tela. -*/
+	font-size: 62.5%
 }
 
 @media screen and (min-width: 200px) {
