@@ -46,15 +46,11 @@ Peformance:
     padding: 1%;    
 }
 
-aside a {
+/* Peformance: Uso da classe no lugar de seletor filho */
+.aside__a {
+    transition: all 0.8s ease;
     display: block;
     padding: 1%;
-	font-size: 2.6em;
-}
-
-aside a:hover {
-    background: blue;
-    color: white;
 }
 
 aside ul {

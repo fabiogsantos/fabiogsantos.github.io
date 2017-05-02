@@ -1,6 +1,6 @@
 
 *:focus {
-  outline: 0.2em dashed #CCC;
+  outline: 0.1em dashed #CCC;
 }
 
 .a11y {
@@ -10,5 +10,5 @@
 
 .contraste * {
 	background-color: black;
-	color: write;
+	color: white;
 }

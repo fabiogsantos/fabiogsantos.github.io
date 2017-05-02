@@ -1,0 +1,44 @@
+body {
+    /*background-color: white;*/
+    /* Responsividade: Melhor organização dos artefatos e fontes da tela. -*/
+	font-size: 62.5%;
+}
+
+section {
+    /*background-color: write;*/
+	font-size: 1.6em;
+}
+
+.container {
+    background: white;
+}
+
+/* BEM CSS: Uso de padrão BEM, onde: __ identifica o seletor filho e -- modificador */
+.main__referencia--primeiro {
+	/* font-style: armenian;
+	font-size: 15px; */
+	color: gray;
+}
+
+.hdr {
+	font-size: 1.6em;
+}
+
+/* Peformance: Uso da classe no lugar de seletor filho */
+.hdr__a:hover {
+    background: blue;
+    color: white;
+}
+
+aside a {
+	font-size: 1.6em;
+}
+
+aside a:hover {
+    background: blue;
+    color: white;
+}
+
+.a11y {
+	font-size: 1.0em;
+}

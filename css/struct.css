@@ -41,13 +41,20 @@ a {
     transition: all 0.8s ease;
 }
 
+p {
+	padding: 10px 20px; 
+}
+
+div {
+	padding: 10px 20px; 	
+}
+
 /* Reuso: Usar a virgula para reuso de configuração aumentando a produtividade e facilitando a manutenção */
 .main__link--descritivo--imagem,
 .hdr__ul, 
 .hdr__a,
 .main__referencia--primeiro,
-.main__selecao--com--semantica,
-.main__selecao--sem--semantica
+.main__selecao--com--semantica
  {
     display: block;
  }
@@ -59,14 +66,12 @@ a {
 }
 
 .container {
-    background: #eee;
     width: 90%;
     margin: 0 auto;    
 }
 
 .main__link--descritivo--imagem {
     margin-bottom: 30px; 
-    color: transparent;	
 }
 
 /* Módularização: módulo main */
@@ -96,41 +101,24 @@ a {
     padding: 10px 20px;
 }
 
-/* Peformance: Uso da classe no lugar de seletor filho */
-.hdr__a:hover {
-    background: blue;
-    color: white;
-}
-
 /* BEM CSS: Uso de padrão BEM, onde: __ identifica o seletor filho e -- modificador */
 .main__image--responsiva50p {
-    width: 50%;
+    width: 30%;
 }
 
 /* BEM CSS: Uso de padrão BEM, onde: __ identifica o seletor filho e -- modificador */
 .main__referencia--primeiro {
-	/* font-style: armenian;
-	font-size: 15px; */
-	color: gray;
+	padding: 0.5em;
 	margin-bottom: 5px;
 }
 
 /* BEM CSS: Uso de padrão BEM, onde: __ identifica o seletor filho e -- modificador */
 .main__selecao--com--semantica {
-	/*color: blue;	*/
 	margin-bottom: 20px;
 }
 
-/* BEM CSS: Uso de padrão BEM, onde: __ identifica o seletor filho e -- modificador */
-.main__selecao--sem--semantica {
-	color: gray;	
-	margin-bottom: 20px;
-}
-
-.main__header__titulo {
-  padding: 40px;
-  text-align: center;
-  cursor: pointer;
+.readmoreSemJQuery {
+	display: none;
 }
 
 main {
@@ -141,7 +129,6 @@ section {
 	float: right;
 	width: 70%;
     padding: 10%;
-    background-color: write;
 }
 
 footer {
